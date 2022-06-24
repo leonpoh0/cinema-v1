@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import SeatComponent from "./Seats";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tickets: 0,
+      seatNumbers: [],
+      seats: section,
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <div>screen</div>
+        <div>
+          <div>
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
+            <span>D</span>
+            <span> </span>
+          </div>
+          <SeatComponent values={this.state.seats} />
+          <div>
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
+            <span>D</span>
+            <span> </span>
+          </div>
+        </div>
+        <div>Legend</div>
+        <div>
+          <div>{this.state.tickets} ticket(s) selected</div>
+          <div>
+            <button>Back</button>
+            <button>Next</button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default App;
+let section = [];
+const startingChar = "A";
+for (let i = 0; i < 7; i += 1) {
+  for (let j = 1; j < 9; j += 1) {
+    let rowChar = String.fromCharCode(startingChar.charCodeAt(0) + i);
+    let seatNumber = rowChar + j;
+    section.push({
+      seatNumber: seatNumber,
+      seatStatus: "available",
+    });
+  }
+}
