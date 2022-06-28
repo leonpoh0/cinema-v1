@@ -6,7 +6,6 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { maxWidth } from "@mui/system";
 import "./App.css";
 
 export default class PriceTable extends React.Component {
@@ -15,13 +14,20 @@ export default class PriceTable extends React.Component {
   }
 
   render() {
-    let seatsToPrint = [...this.props.seatNumbers];
-    let printSeats = seatsToPrint[0];
-    seatsToPrint.shift();
-    while (seatsToPrint.length > 0) {
-      printSeats += ", " + seatsToPrint;
-      seatsToPrint.shift();
+    let seatsToPrint = [...this.props.selectedSeats];
+    let printSeats = "";
+    if (seatsToPrint.length === 0) {
+      printSeats = "-";
+    } else {
+      for (let i = 0; i < seatsToPrint.length; i += 1) {
+        if (i !== seatsToPrint.length - 1) {
+          printSeats += seatsToPrint[i] + ", ";
+        } else {
+          printSeats += seatsToPrint[i];
+        }
+      }
     }
+
     let totalPrice = priceList[this.props.typeOfTicket] * this.props.tickets;
     let priceToReflect = "";
     if (isNaN(totalPrice)) {

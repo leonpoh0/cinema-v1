@@ -12,7 +12,8 @@ html {
   margin: 10px auto;
   display: flex;
   flex-direction: row;
-  min-width: 415px;
+  max-width: 768px;
+  justify-content: center;
 }
 
 .poster {
@@ -48,8 +49,9 @@ html {
   background-color: white;
   width: 90%;
   margin: 30px auto;
-  min-width: 318px;
   max-width: 600px;
+  display: flex;
+  justify-content: center;
 }
 
 .seats-and-rows {
@@ -60,6 +62,7 @@ html {
   color: white;
   font-weight: bold;
   margin: 50px auto 10px auto;
+  min-width: 380px;
 }
 
 .row-numbers {
@@ -116,6 +119,17 @@ html {
   color: white;
   font-weight: bold;
   margin: 10px auto 20px auto;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.legends-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 3px;
 }
 
 .legends-seat {
@@ -135,8 +149,8 @@ html {
   background-color: #d9d9d9;
   font-weight: bold;
   max-width: 400px;
-  height: 60px;
-  margin: 5px auto;
+  padding: 10px;
+  margin: 10px auto;
   justify-content: center;
   align-items: center;
 }

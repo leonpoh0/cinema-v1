@@ -9,7 +9,6 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       tickets: 0,
-      seatNumbers: [],
       seatsValues: section,
       availableSeats: section,
       unavailableSeats: [],
@@ -29,7 +28,6 @@ export default class App extends React.Component {
     ) {
       this.setState((prev) => ({
         tickets: prev.tickets + 1,
-        seatNumbers: [...prev.seatNumbers, clickedSeat],
         availableSeats: prev.availableSeats.filter(
           (seatNum) => seatNum !== clickedSeat
         ),
@@ -38,9 +36,6 @@ export default class App extends React.Component {
     } else if (e.target.className.includes("selected")) {
       this.setState((prev) => ({
         tickets: prev.tickets - 1,
-        seatNumbers: prev.seatNumbers.filter(
-          (seatNum) => seatNum !== clickedSeat
-        ),
         availableSeats: [...prev.availableSeats, clickedSeat],
         selectedSeats: prev.selectedSeats.filter(
           (seatNum) => seatNum !== clickedSeat
@@ -53,7 +48,6 @@ export default class App extends React.Component {
     let seatsToBook = this.state.selectedSeats;
     this.setState((prev) => ({
       tickets: 0,
-      seatNumbers: [],
       selectedSeats: [],
       unavailableSeats: [...prev.unavailableSeats, seatsToBook],
     }));
@@ -76,7 +70,10 @@ export default class App extends React.Component {
       ticketsSelected =
         this.state.tickets +
         " tickets selected - Seats " +
-        this.state.selectedSeats;
+        this.state.selectedSeats[0];
+      for (let i = 1; i < this.state.selectedSeats.length; i += 1) {
+        ticketsSelected += ", " + this.state.selectedSeats[i];
+      }
     }
     return (
       <div className="App">
@@ -119,12 +116,18 @@ export default class App extends React.Component {
           </div>
         </div>
         <div className="legends">
-          <div className="available legends-seat"></div>
-          <span className="legends-text">Available </span>
-          <div className="selected legends-seat"></div>
-          <span className="legends-text">Selected</span>
-          <div className="unavailable legends-seat"></div>
-          <span className="legends-text">Unavailable</span>
+          <div className="legends-item">
+            <div className="available legends-seat"></div>
+            <span className="legends-text">Available </span>
+          </div>
+          <div className="legends-item">
+            <div className="selected legends-seat"></div>
+            <span className="legends-text">Selected</span>
+          </div>
+          <div className="legends-item">
+            <div className="unavailable legends-seat"></div>
+            <span className="legends-text">Unavailable</span>
+          </div>
         </div>
         <div>
           <div className="ticket-summary">{ticketsSelected}</div>
@@ -147,7 +150,7 @@ export default class App extends React.Component {
           </div>
           <PriceTable
             tickets={this.state.tickets}
-            seatNumbers={this.state.seatNumbers}
+            selectedSeats={this.state.selectedSeats}
             typeOfTicket={this.state.value}
           />
           <div>
