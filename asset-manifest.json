@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cinema-v1/static/css/main.523e4210.css",
+    "main.js": "/cinema-v1/static/js/main.abaab2f1.js",
+    "static/js/787.b144437c.chunk.js": "/cinema-v1/static/js/787.b144437c.chunk.js",
+    "static/media/Lightyear.jpeg": "/cinema-v1/static/media/Lightyear.3b04724d32109502dc33.jpeg",
+    "index.html": "/cinema-v1/index.html",
+    "main.523e4210.css.map": "/cinema-v1/static/css/main.523e4210.css.map",
+    "main.abaab2f1.js.map": "/cinema-v1/static/js/main.abaab2f1.js.map",
+    "787.b144437c.chunk.js.map": "/cinema-v1/static/js/787.b144437c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.523e4210.css",
+    "static/js/main.abaab2f1.js"
+  ]
+}
