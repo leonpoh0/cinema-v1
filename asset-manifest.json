@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/cinema-v1/static/css/main.77533fda.css",
-    "main.js": "/cinema-v1/static/js/main.beeac693.js",
-    "static/js/787.b144437c.chunk.js": "/cinema-v1/static/js/787.b144437c.chunk.js",
-    "static/media/Lightyear.jpeg": "/cinema-v1/static/media/Lightyear.3b04724d32109502dc33.jpeg",
-    "index.html": "/cinema-v1/index.html",
-    "main.77533fda.css.map": "/cinema-v1/static/css/main.77533fda.css.map",
-    "main.beeac693.js.map": "/cinema-v1/static/js/main.beeac693.js.map",
-    "787.b144437c.chunk.js.map": "/cinema-v1/static/js/787.b144437c.chunk.js.map"
+    "main.css": "/movie-booking/static/css/main.77533fda.css",
+    "main.js": "/movie-booking/static/js/main.3cf53259.js",
+    "static/js/787.18aff4a3.chunk.js": "/movie-booking/static/js/787.18aff4a3.chunk.js",
+    "static/media/Lightyear.jpeg": "/movie-booking/static/media/Lightyear.3b04724d32109502dc33.jpeg",
+    "index.html": "/movie-booking/index.html",
+    "main.77533fda.css.map": "/movie-booking/static/css/main.77533fda.css.map",
+    "main.3cf53259.js.map": "/movie-booking/static/js/main.3cf53259.js.map",
+    "787.18aff4a3.chunk.js.map": "/movie-booking/static/js/787.18aff4a3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.77533fda.css",
-    "static/js/main.beeac693.js"
+    "static/js/main.3cf53259.js"
   ]
 }
