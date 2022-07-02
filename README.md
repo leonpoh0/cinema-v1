@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+The objective of this project is to build a cinema's movie booking page.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project utilises ReactJS, and consists of the following:
 
-## Available Scripts
+1. Parent component found at App.js
+2. 2 x child components found at Seats.js and PriceTable.js
+3. 1 x image found in the assets folder
+4. Styling for project found in App.css
+5. MUI was used in PriceTable.js to build the table.
+6. EmailJS was used for the user to send a copy of the booking confirmation to.
 
-In the project directory, you can run:
+===
+The scenario
+===
+The user has selected to watch the movie, "Disney and Pixar’s Lightyear", takes place at "Orchard Theatres Hall 1" on "THURSDAY 16 JUN 2022 8:00 PM". On the page, user will be able to select from available seats, choose the ticket type, make a booking, and then send a copy of the booking to his email.
 
-### `npm start`
+===
+Approach for the project
+===
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Desktop research was done to identify common user journeys and designs from existing cinema booking websites.
+2. Created wireframes to visualise the concept, and then features to be developed were prioritised.
+3. Reviewed the layout of the page to decide on structure of the code (parent and child components).
+4. After the base features were developed, additional features (ticket type selection and EmailJS) were then gradually picked up and added in.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+===
+Assumptions
+===
 
-### `npm test`
+1. We assume that the cinema has a fixed seat layout as defined in App.js. To illustrate the example of unavailable seats, seats 'G4' and 'G5' are coded to be unavailable.
+2. We do not integrate with a payment gateway for this project. We assume that the user has paid when he confirms his booking. An enhancement to integrate with a payment gateway may be considered in the future.
+3. We assume that the user inputs validated name and email address in the input fields for EmailJS to send out the email to.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+===
+Possible future enhancements
+===
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Add validation checks for the name and email address input fields.
+2. Modify the parent component so that the seats layout is modifiable.
+3. Integrate with backend to reflect real time bookings by different users.
+4. Integrate with a payment gateway system.

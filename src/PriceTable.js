@@ -9,10 +9,6 @@ import Paper from "@mui/material/Paper";
 import "./App.css";
 
 export default class PriceTable extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let seatsToPrint = [...this.props.selectedSeats];
     let printSeats = "";
