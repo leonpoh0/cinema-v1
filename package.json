@@ -1,6 +1,6 @@
 {
-  "homepage": "http://leonpoh0.github.io/cinema-v1",
-  "name": "cinema-booking",
+  "homepage": "http://leonpoh0.github.io/movie-booking",
+  "name": "movie-booking",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
