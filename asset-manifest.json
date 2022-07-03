@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/movie-booking/static/css/main.77533fda.css",
-    "main.js": "/movie-booking/static/js/main.3cf53259.js",
+    "main.css": "/movie-booking/static/css/main.0f8f39d8.css",
+    "main.js": "/movie-booking/static/js/main.572c62d5.js",
     "static/js/787.18aff4a3.chunk.js": "/movie-booking/static/js/787.18aff4a3.chunk.js",
     "static/media/Lightyear.jpeg": "/movie-booking/static/media/Lightyear.3b04724d32109502dc33.jpeg",
     "index.html": "/movie-booking/index.html",
-    "main.77533fda.css.map": "/movie-booking/static/css/main.77533fda.css.map",
-    "main.3cf53259.js.map": "/movie-booking/static/js/main.3cf53259.js.map",
+    "main.0f8f39d8.css.map": "/movie-booking/static/css/main.0f8f39d8.css.map",
+    "main.572c62d5.js.map": "/movie-booking/static/js/main.572c62d5.js.map",
     "787.18aff4a3.chunk.js.map": "/movie-booking/static/js/787.18aff4a3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77533fda.css",
-    "static/js/main.3cf53259.js"
+    "static/css/main.0f8f39d8.css",
+    "static/js/main.572c62d5.js"
   ]
 }
