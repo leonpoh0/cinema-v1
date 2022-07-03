@@ -4,6 +4,7 @@ html {
 
 .App {
   text-align: center;
+  -webkit-appearance: none;
 }
 
 .movie-info {
@@ -179,6 +180,11 @@ html {
   margin: 10px auto;
 }
 
+.table-headers {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 .none {
   display: none;
 }
@@ -204,6 +210,7 @@ html {
   font-weight: bold;
   border-radius: 4px;
   padding: auto 10000px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 480px) {

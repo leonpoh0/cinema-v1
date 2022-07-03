@@ -231,7 +231,10 @@ export default class App extends React.Component {
             <div>
               <label>
                 <span className="ticket-text">Select Ticket Type: </span>
-                <select onChange={this.handleChangeTicketType}>
+                <select
+                  onChange={this.handleChangeTicketType}
+                  className="button-style"
+                >
                   <option value="Standard Ticket">
                     Standard Ticket - $14.00
                   </option>
